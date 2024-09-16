@@ -5,6 +5,7 @@ body{
 		justify-content: center;
 		background-color: black;
 		overflow: hidden;
+		border: 10pp;
 		}
 p{
 	color: white;
