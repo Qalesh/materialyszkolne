@@ -1,1 +1,1 @@
-# InstalingS-owkaNiem
+# InstalingNiemiecki
