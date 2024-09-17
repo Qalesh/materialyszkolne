@@ -1,0 +1,40 @@
+body{
+		margin: 0;
+		height: 100vh;
+		align-items: right;
+		justify-content: right;
+		background-color: black;
+		overflow: hidden;
+		border-left: 2rem solid;
+		
+		}
+p{
+	color: white;
+	font: 1.1rem "Fira Sans", sans-serif;
+	align-items: left;
+	justify-content: left;
+	display: flex;
+}
+h2{
+	color: white;
+	align-content: left;
+	
+
+}
+span{
+	color: #48f7e6;
+	font: 1.1rem "Fira Sans", sans-serif;
+	
+}
+.column {
+  float: left;
+  width: 50%;
+  
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
