@@ -1,0 +1,44 @@
+body{
+		margin: 0;
+		height: 100vh;
+		align-items: right;
+		justify-content: right;
+		background-color: #b8dbd3;
+		overflow: hidden;
+		
+		}
+p{
+	color: white;
+	font: 1.1rem "Fira Sans", sans-serif;
+	align-items: left;
+	justify-content: left;
+	display: flex;
+}
+.span a{
+	position: absolute;
+	left: 100px;
+}
+.nav{
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	background-color: #f7e7b4;
+	padding: 10px;
+	width: 100%;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3)
+}
+span{
+	color: #68c4af;
+	font: 1.1rem "Fira Sans", sans-serif;
+	
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px; 
+}
+
+.column {
+  flex: 1;
+  margin: 0 20px; 
+}
