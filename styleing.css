@@ -1,0 +1,65 @@
+body{
+		margin: 0;
+		height: 100vh;
+		align-items: right;
+		justify-content: right;
+		background-color: #82A4D3;
+		overflow: hidden;
+		overflow: scroll;
+		
+		
+		}
+p.n{
+	color: white;
+	font: 1.1rem "Fira Sans", sans-serif;
+	align-items: left;
+	justify-content: left;
+}
+p.a{
+	color: white;
+	font: 1.1rem "Fira Sans", sans-serif;
+	align-items: left;
+	justify-content: left;
+	margin: 0 20px; 
+}
+span a{
+	color: black;
+	font: 1.1rem "Fira Sans", sans-serif;
+}
+span.zolty{
+	color: #f2f6c3;
+}
+span.zoltyc{
+	color: #f7e7b4;
+	font: 1.1rem "Fira Sans", sans-serif;
+}
+span.pzielony{
+	color: #b8dbd3;
+	font: 1.1rem "Fira Sans", sans-serif;
+}
+
+.nav{
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	background-color: #670052;
+	padding: 10px;
+	width: 100%;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3)
+}
+
+h2{
+	color:white;
+	
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px; 
+}
+
+.column {
+  flex: 1;
+  margin: 0 20px; 
+}
