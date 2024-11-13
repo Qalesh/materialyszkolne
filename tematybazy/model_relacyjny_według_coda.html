@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="styleing.css">
+		<title>Model relacyjny</title>
+	</head>
+
+<body>
+	<header>
+		<div class="nav">
+		<h2><u>Temat: Model relacyjny według E.F Codda.</u></h2>
+		</div>
+	</header>
+		
+			<p style="text-indent: 20px;">Twórcą teorii relacyjnych baz danych jest <span class="zoltyc">Edgar Frank Codd</span>.</p>
+			<p>W 1970 opublikował pracę <span class="pzielony">"Relacyjny model danych dla dużych banków danych"</span>, która wprowadzała głównie założenia modelu relacyjnego baz danych.</p>
+				<br/>
+			<p>Według podanych załóżeń, określenie <span class="zoltyc">reakcyjna baza danych</span> oznacza <span class="zoltyc">bazę zbudowaną z relacji.</span><br/>
+			<p>Podstawowy obiekt danej bazy to <span class="zoltyc">tabela</span>, która jest reprezentacją relacji w ujęciu pojęć matematycznych.</p>
+			<p>Terminy <span class="zoltyc">relacja</span> i <span class="zoltyc">tabela</span> nie są jednoznaczne, ponieważ jedna <span class="zoltyc">relacja</span> może być odwzorowana za pomocą wielu różnych <span class="zoltyc">tabel</span>.</p>
+			<p>Nie uważa się rónież pojęć związanych z tabelą <span class="pzielony">tabela</span> i <span class="pzielony">wiersz</span> lecz <span class="zoltyc">atrybut</span> i <span class="zoltyc">krotka</span>.</p>
+				<br/>
+			<p>W modelu relacyjnym przyjmuje się:</p>
+			<p style="text-indent: 20px;">-kolejność <span class="a">wierszy</span> i <span class="a">kolumn</span> jest nieistotna.</p>
+			<p style="text-indent: 20px;">-wiersze zawierające takie same dane są identyczne.</p>
+				<br/>
+			<p>Każda tabela składa się z pewnej liczby <span class="zolty">wierszy</span> i <span class="zolty">kolumn</span>.</p>
+			<p>Na przecięciu <span class="zolty">wiersza</span> i <span class="zolty">kolumny</span> znajdują się pole, ktore zawiera najmniejszą niepodzielną wartość <span class="pzioelony">(wielkość atomową)</span>.</p>
+			<p><span class="zolty">Najczęstrzym błędem jest przypisanie atrybutu do jednej komórki</span> np. adres i wpisanie kodu adresu oraz numeru domu.</p>
+				<br/>
+			<h2 style="margin: 0 10px">Klucz</h2>
+			<table class="klucz">
+			<tr valign="top">
+				<td class="klucz"><p><span class="zoltyc">Kluczem schematu R</span> relacji nazywamy taki zbiór atrybótów <span class="zoltyc">K</span> tego schematu,<br/> że na podstawie wartości atrybtutów z tego zbioru można jednoznacznie zidentyfikować każdą <span class="zoltyc">krotkę.</span></p></td>
+				<td class="klucz"><p>Wartość <span class="zoltyc">klucza</span> pozwala jednoznacznie zidentyfikować <span class="zoltyc">krotki</span>.</p></td>
+			</tr>
+			<tr >
+				<td class="klucz"><p>Wartość <span class="zoltyc">klucza</span> pozwala jednoznacznie ziddentyfikować <span class="zoltyc">krotki</span>.</p></td>
+				<td class="klucz"><p>Dany schemat może posiadać kilka <span class="zoltyc">kluczy</span>.</p></td>
+			</tr>
+			<tr>
+				<td class="klucz"><p>Każdy zbiór klucza jest <span class="zoltyc">kluczem</span>.</p></td>
+				<td class="klucz"><p>Klucz, którego żaden podzbiór właściwy nie jest kluczem, nazywamy <span class="zoltyc">kluczem właściwym</span> lub <span class="zoltyc">kandydującym</span>.</td></p>
+			</tr>
+			</table>
+			<br/>
+			<h2 style="margin: 0 10px">Integralność danych</h2>
+			<p><span class="zoltyc">Integralność</span> <span class="pzielony">(spójność)</span> danych oznacza poprawność struktóry <span class="zoltyc">bazy danych</span> - czyli zgodności ze schematem bazy danych - oraz poprawność przechowywanych w niej danych.</p>
+			<br/>
+			<p>W relacyjnym modelu baz danych występują następujące rodzaje węzłów integralności:</p>
+				<table class="intd">
+				<tr>
+					<td class="intd"><p>- <span class="pzielony">Integralność encji</span></p></td>
+					<td class="intd">-</td>
+					<td class="intd"><p>Każda relacja posiada klucz główny i żaden element klucza głównego nie może posiadać wartości pustej <span class="zolty">(NULL)</span></p></td>
+				</tr>
+				<tr>
+					<td class="intd"><p>- <span class="pzielony">Integralność referencyjna</span></p></td>
+					<td class="intd">-</td>
+					<td class="intd"><p>Każda wartość klucza obcego jest równa wartości klucza głównego określonej krotki lub wynosi <span class="zolty">NULL</span></p></td>
+				</tr>
+				<tr>
+					<td class="intd"><p>- <span class="pzielony">Więzy ogólne</span></p></td>
+					<td class="intd">-</td>
+					<td class="intd"><p>Dodatkowe warunki dotyczące poprawności danych określane przez <span class="zoltyc">użytkowników</span> lub <span class="zoltyc">administratorów</span> baz danych</p></td>
+				</tr>
+				</table>
+			<br/>
+			<h2 style="margin: 0 10px">Algebra relacji</h2>
+			<br/>
+			<p><span class="zoltyc">Algebra relacji</span> zawiera zbiór operacji które pozwalają na tworzenie potrzebnych <span class="pzielony">relacji z relacji</span> dostępnych w bazie danych.</p>
+			<br/>
+			<p><span class="zoltyc">Selekcja</span> jest to wybór tych <span class="pzielony">krotek relacji</span> które spełniają określone warunki.</p>
+			<br/>
+			
+			<table>
+			<tr>
+			<td><table class="rs">
+						<tr bgcolor="#FDD26A">
+						<td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr bgcolor="#FEEEC7">
+						<td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr>
+						<td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr bgcolor="#FEEEC7">
+						<td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr>
+						<td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr>
+						<td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td>
+						</tr>
+						</table></td>
+			<td><h2>Przykład sekelcji ></h2></td>
+			<td>
+			<table class="rs2">
+						<tr bgcolor="#FDD26A">
+						<td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr bgcolor="#FEEEC7">
+						<td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr bgcolor="#FEEEC7">
+						<td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td>
+						</tr>
+			</td>
+			</tr>
+			</table>
+			</table>
+			<br/>
+			<p><span class="zoltyc">Projekcja</span> jest to wybór określonych atrybutów. Jest czasem nazywana <span class="pzielony">selekcją pionową</span> lub <span class="pzielony">zrzutem</span>.</p>
+			<br/>
+				<table>
+			<tr>
+			<td><table class="rs">
+						<tr bgcolor="#FDD26A">
+						<td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr >
+						<td class="rs"></td><td class="rp"></td><td class="rs"></td><td class="rp"></td><td class="rs"></td>
+						</tr>
+						<tr>
+						<td class="rs"></td><td class="rp"></td><td class="rs"></td><td class="rp"></td><td class="rs"></td>
+						</tr>
+						<tr>
+						<td class="rs"></td><td class="rp"></td><td class="rs"></td><td class="rp"></td><td class="rs"></td>
+						</tr>
+						<tr>
+						<td class="rs"></td><td class="rp"></td><td class="rs"></td><td class="rp"></td><td class="rs"></td>
+						</tr>
+						<tr>
+						<td class="rs"></td><td class="rp"></td><td class="rs"></td><td class="rp"></td><td class="rs"></td>
+						</tr>
+						</table></td>
+			<td><h2>Przykład Projekcji ></h2></td>
+			<td>
+			<table class="rs2">
+						<tr bgcolor="#FDD26A">
+						<td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr bgcolor="#FEEEC7">
+						<td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr bgcolor="#FEEEC7">
+						<td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr bgcolor="#FEEEC7">
+						<td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr bgcolor="#FEEEC7">
+						<td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr bgcolor="#FEEEC7">
+						<td class="rs"></td><td class="rs"></td>
+						</tr>
+			</td>
+			</tr>
+			</table>
+			</table>
+			<br/>
+			<p><span class="zoltyc">Złączenie</span> jest to utworzenie z danych zawartych w dwóch relacjach jednej relacji. Najczęściej łączone są relacje które mają taki sam atrybut.</p>
+				<table>
+			<tr>
+			<td><table class="rs">
+						<tr bgcolor="#FDD26A">
+						<td class="rs"></td><td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr >
+						<td class="rp"></td><td class="rp"></td><td class="rp"></td>
+						<tr>
+						<td class="rp"></td><td class="rp"></td><td class="rp"></td>
+						</tr>
+						<tr>
+						<td class="rp"></td><td class="rp"></td><td class="rp"></td>
+						</tr>
+						<tr>
+						<td class="rp"></td><td class="rp"></td><td class="rp"></td>
+						</tr>
+						<tr>
+						<td class="rp"></td><td class="rp"></td><td class="rp"></td>
+						</tr>
+						</table></td>
+						<td><table class="rs">
+						<tr bgcolor="#FDD26A">
+						<td class="rs"></td><td class="rs"></td>
+						<tr >
+						<td class="rs"></td><td class="rs"></td>
+						<tr>
+						<td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr>
+						<td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr>
+						<td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr>
+						<td class="rs"></td><td class="rs"></td>
+						</tr>
+						</table></td>
+			<td><h2>Przykład Złączenia ></h2></td>
+			<td>
+			<table class="rs2">
+						<tr bgcolor="#FDD26A">
+						<td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr bgcolor="#FEEEC7">
+						<td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr bgcolor="#FEEEC7">
+						<td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr bgcolor="#FEEEC7">
+						<td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr bgcolor="#FEEEC7">
+						<td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td>
+						</tr>
+						<tr bgcolor="#FEEEC7">
+						<td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td><td class="rs"></td>
+						</tr>
+			</td>
+			</tr>
+			</table>
+			</table>
+			<br/>
+			<p><span class="zoltyc">Koczyn kartezjański</span> dwóch relacji jest zbiorem wszystkich możliwych połączeń kratek obu relacji</p>
+			<br/>
+			<p><span class="zoltyc">Wartość NULL</span> rozszerza logikę dwuwartościowością (0 i 1) operatorów porównywania do trójwartościowości (nie, tak, nieznane). Wartość NULL określa wartość atrybtutu, która w danej chwili nie jest znana lub nie może zostać ustalona np. nieznany numer telefonu.</p>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

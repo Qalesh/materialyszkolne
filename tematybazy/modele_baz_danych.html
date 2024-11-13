@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="styleing.css">
+		<title>Modele baz</title>
+	</head>
+
+<body>
+	<header>
+		<div class="nav">
+		<h2><u>Temat: Modele baz danych </u></h2>
+		</div>
+	</header>
+		
+		<h2 style="margin: 0 10px">Wprowadzenie do baz danych</h2>
+		<p class="a">Tradycyjne dane przechowywane są w postaci <span class="zoltyc">dokumentów papierowych</span>.</p>
+		<p class="a">Dokumenty takie zawierają opisy przechowalnych obiektów. Obiektami mogą być np. samochody, książki czy osoby.</p>
+		<p class="a">Opisywane są również związki zachodzące między obietkami:</p>
+			<p class="a">- kto jest właścicielem samochodu</p>
+			<p class="a">- kto wypożyczył książkę</p>
+			<p class="a">- gdzie pracuje dana osoba...</p>
+		<br/>
+		<p class="a">Dokumenty opisujące obiekty i związki są gromadzone w postaci kartek i są przechowywane w <span class="zoltyc">teczkach</span> czy <span class="zoltyc">segregatorach</span>.</p>
+		<p class="a">Dobrym rozwiązaniem problemu wolnego wyszukiwania jest przeniesienie takich dokumentów do komputera,<br/>gdzie można obsługiwać tak utworzoną bazę za pomocą dostępnych narzędzi ułatwiających wyszukiwanie danych.</p>
+		<br/>
+		<p class="a">Zalety korzystania z komputerowych baz danych:</p>
+			<p class="a">- Szybkie wyszukiwanie danych.</p>
+			<p class="a">- Łatwe wykonywanie obliczeń</p>
+			<p class="a">- Możliwość przechowywania dużej ilości danych na małej powierzchni</p>
+			<p class="a">- Szybkie porządkowanie danych</p>
+		<br/>
+		<p class="a"><span class="pzielony">Baza danych</span> - to uporządkowany zbiór danych z określonej dziedziny tematycznej zorganizowany w sposób ułatwiający do nich dostęp.</p>
+		<br/>
+		<p class="a"><span class="pzielony">System zarządzania bazą danych</span> - to program zarządzający danymi w bazie umożliwiający ich przetwarzanie.</p>
+		<br/>
+		<p class="a"><span class="pzielony">System bazy danych</span> - to baza danych wraz z systemem zarządzania bazą danych</p>
+		<br/>
+		<p class="a">Aby przechowywać dane na komputerze konieczne jest określanie formy ich przechowywania. Na potrzeby baz danych zostały zdefiniowane klasyczne techniki organizowania informacji zwane <span class="zoltyc">modelami baz danych</span>.</p>
+		<br/>
+		<p class="a"><span class="zoltyc">Model danych</span> to abstrakcyjny opis sposobu przedstawiania i wykorzystania danych.</p>
+			<p class="a">Na model danych składają się:</p>
+			<p class="a">-<span class="zolty">struktura</span> - opis sposobu przedstawiania obiektów <span class="pzielony">(encji)</span> modelowania wycinka świata oraz ich związków.</p>
+			<p class="a">-<span class="zolty">ograniczenia</span> - reguły kontrolujące spójność i poprawność danych.</p>
+			<p class="a">-<span class="zolty">operacje</span> - zbiór działań, które umożliwiają dostęp struktur.</p>
+		<br/>
+		<p class="a">Głównymi modelami baz danych są:</p>
+			<p class="a">- Model <span class="zoltyc">hierarchiczny</span></p>
+			<p class="a">- Model <span class="zoltyc">sieciowy</span></p>
+			<p class="a">- Model <span class="zoltyc">obiektowy</span></p>
+			<p class="a">- Model <span class="zoltyc">relacyjny</span></p>
+		<br/>
+		<h2 style="margin: 0 10px">Model hierarchiczny</h2>
+			<p class="a">W <span class="zoltyc">modelu hierarchicznym</span> przechowywane dane są zorganizowane w postaci <span class="pzielony">odwróconego drzewa</span>.<br/>Każdy obiekt <span class="zolty">(z wyjątkiem obiektu podstawowego)</span> jest połączony z jednym obiektem nadrzędnym.</p>
+				<img style="margin: 0 50px"src="./zdj/modelhierarchiczny.png"/>
+			<br/>
+			<p class="a">Tak zbudowana baza danych umożliwia proste wyszukiwanie danych.</p>
+			<p class="a">Rozpoczyna się ono od <span class="zolty">obiektu podstawowego</span> i poprzez <span class="zolty">rozgałęzienia</span> oraz kolejne obiekty dochodzi się do <span class="zolty">obiektu szukanego</span>. Informacja jest zawarta w kolejnych dokumentach oraz w <span class="zolty">strukturze drzewa</span>.</p>
+			<br/>
+			<p class="a"><span class="zolty">Hierarchiczna baza danych</span> zakłada podstawowe warunki intergralności danych.</p>
+			<p class="a"><span class="zolty">Dokument podrzędny</span> może zostać utowrzony dopiero gdy zostanie powiązany z <span class="zolty">dokumentem nadrzędnym</span>. Kiedy zostanie usunięty <span class="zolty">dokument nadrzędny</span>, automatycznie zostaną usunięte wszystkie <span class="zolty">dokumenty podrzędne</span></p>
+		<br/>
+		<h2 style="margin: 0 10px">Model sieciowy</h2>
+			<p class="a">W <span class="zolty">modelu sieciowym</span> połączenia między dokumentami tworzą sieć.</p>
+			<p class="a">Jest to zmodyfikowana wersja<span class="zolty"> modelu hierarchicznego</span>,<br/>w której dozwolone są połączenia na tym samym poziomie <span class="zolty">drzewa danych</span>.</p>
+			<p class="a">Informacja jest zawarta w <span class="zolty">dokumentach</span> oraz w <span class="zolty">przebiegu połączeń sieci</span>.</p>
+				<img style="margin: 0 50px"src="./zdj/modelsieciowy.png"/>
+		<br/>
+		<h2 style="margin: 0 10px">Model obiektowy</h2>
+			<p class="a"><span class="zolty">Model obiektowy</span> łączy cechy programów komputerowych tworzonych w językach <span class="zolty"> programowania obiektowego</span> z cechami <span class="zolty">aplikacji bazodanowych</span>.</p>
+			<p class="a">Dane są udostepnione w postaci <span class="zolty">obietków</span>. Ich stan i zachowanie są opisywanie za pomocą narzędzi dostępnych w programowaniu obiektowym <span class="pzielony">(własności,metody,klasy)</span>.</p>
+			<p class="a">Do przechowywania danych stosowane są <span class="zolty">obiekty</span>.</p>
+		<br/>
+		<h2 style="margin: 0 10px">Model relacyjny</h2>
+			<p class="a"><span class="zolty">Model relacyjny</span> baz danych został oparty na matematycznym modelu organizacji i pojęciu relacji.<br/>W tym modelu, dane są przedstawione w postaci<span class="zolty"> relacji</span> reprezentowanych przez <span class="zolty">tabele</span>.</p>
+			<p class="a"><span class="zolty">Relacje</span> <span class="pzielony">(tabele)</span> składają się z <span class="zolty">rekordów</span> <span class="pzielony">(wierszy)</span> o takiej samej strukturze.</p>
+			<p class="a">Tworzą one między sobą powiązania zwane <span class="zolty">relacjami</span>.</p>
+			<p class="a">Ze względu na funkcjonalność, model ten najczęściej wykorzystywany przy projektowaniu <span class="zolty">baz danych</span>.</p>
+				<img style="margin: 0 50px"src="./zdj/modelrelacyjny.png"/>
+</body>
+</html>
